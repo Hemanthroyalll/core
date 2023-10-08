@@ -4,6 +4,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from bond_async import Action, BPUPSubscriptions
+mdi_lightbulb = "mdi:lightbulb"
+mdi_brightness_percent = "mdi:brightness-percent"
 
 from homeassistant.components.button import ButtonEntity, ButtonEntityDescription
 from homeassistant.config_entries import ConfigEntry
@@ -60,7 +62,7 @@ BUTTONS: tuple[BondButtonEntityDescription, ...] = (
     BondButtonEntityDescription(
         key=Action.TOGGLE_LIGHT,
         name="Toggle Light",
-        icon="mdi:lightbulb",
+        icon= mdi_lightbulb,
         mutually_exclusive=Action.TURN_LIGHT_ON,
         argument=None,
     ),
@@ -81,98 +83,98 @@ BUTTONS: tuple[BondButtonEntityDescription, ...] = (
     BondButtonEntityDescription(
         key=Action.TOGGLE_UP_LIGHT,
         name="Toggle Up Light",
-        icon="mdi:lightbulb",
+        icon=mdi_lightbulb,
         mutually_exclusive=Action.TURN_UP_LIGHT_ON,
         argument=None,
     ),
     BondButtonEntityDescription(
         key=Action.TOGGLE_DOWN_LIGHT,
         name="Toggle Down Light",
-        icon="mdi:lightbulb",
+        icon=mdi_lightbulb,
         mutually_exclusive=Action.TURN_DOWN_LIGHT_ON,
         argument=None,
     ),
     BondButtonEntityDescription(
         key=Action.START_DIMMER,
         name="Start Dimmer",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_BRIGHTNESS,
         argument=None,
     ),
     BondButtonEntityDescription(
         key=Action.START_UP_LIGHT_DIMMER,
         name="Start Up Light Dimmer",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_UP_LIGHT_BRIGHTNESS,
         argument=None,
     ),
     BondButtonEntityDescription(
         key=Action.START_DOWN_LIGHT_DIMMER,
         name="Start Down Light Dimmer",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_DOWN_LIGHT_BRIGHTNESS,
         argument=None,
     ),
     BondButtonEntityDescription(
         key=Action.START_INCREASING_BRIGHTNESS,
         name="Start Increasing Brightness",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_BRIGHTNESS,
         argument=None,
     ),
     BondButtonEntityDescription(
         key=Action.START_DECREASING_BRIGHTNESS,
         name="Start Decreasing Brightness",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_BRIGHTNESS,
         argument=None,
     ),
     BondButtonEntityDescription(
         key=Action.INCREASE_UP_LIGHT_BRIGHTNESS,
         name="Increase Up Light Brightness",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_UP_LIGHT_BRIGHTNESS,
         argument=STEP_SIZE,
     ),
     BondButtonEntityDescription(
         key=Action.DECREASE_UP_LIGHT_BRIGHTNESS,
         name="Decrease Up Light Brightness",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_UP_LIGHT_BRIGHTNESS,
         argument=STEP_SIZE,
     ),
     BondButtonEntityDescription(
         key=Action.INCREASE_DOWN_LIGHT_BRIGHTNESS,
         name="Increase Down Light Brightness",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_DOWN_LIGHT_BRIGHTNESS,
         argument=STEP_SIZE,
     ),
     BondButtonEntityDescription(
         key=Action.DECREASE_DOWN_LIGHT_BRIGHTNESS,
         name="Decrease Down Light Brightness",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_DOWN_LIGHT_BRIGHTNESS,
         argument=STEP_SIZE,
     ),
     BondButtonEntityDescription(
         key=Action.CYCLE_UP_LIGHT_BRIGHTNESS,
         name="Cycle Up Light Brightness",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_UP_LIGHT_BRIGHTNESS,
         argument=STEP_SIZE,
     ),
     BondButtonEntityDescription(
         key=Action.CYCLE_DOWN_LIGHT_BRIGHTNESS,
         name="Cycle Down Light Brightness",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_DOWN_LIGHT_BRIGHTNESS,
         argument=STEP_SIZE,
     ),
     BondButtonEntityDescription(
         key=Action.CYCLE_BRIGHTNESS,
         name="Cycle Brightness",
-        icon="mdi:brightness-percent",
+        icon=mdi_brightness_percent,
         mutually_exclusive=Action.SET_BRIGHTNESS,
         argument=STEP_SIZE,
     ),

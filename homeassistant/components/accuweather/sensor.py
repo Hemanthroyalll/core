@@ -5,6 +5,8 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any, cast
 
+mdi_weather_cloudy = "mdi:weather-cloudy"
+mdi_weather_sunny = "mdi:weather-sunny"
 from homeassistant.components.sensor import (
     SensorDeviceClass,
     SensorEntity,
@@ -78,7 +80,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     *(
         AccuWeatherSensorDescription(
             key="CloudCoverDay",
-            icon="mdi:weather-cloudy",
+            icon=mdi_weather_cloudy,
             entity_registry_enabled_default=False,
             native_unit_of_measurement=PERCENTAGE,
             value_fn=lambda data: cast(int, data),
@@ -90,7 +92,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     *(
         AccuWeatherSensorDescription(
             key="CloudCoverNight",
-            icon="mdi:weather-cloudy",
+            icon=mdi_weather_cloudy,
             entity_registry_enabled_default=False,
             native_unit_of_measurement=PERCENTAGE,
             value_fn=lambda data: cast(int, data),
@@ -216,7 +218,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     *(
         AccuWeatherSensorDescription(
             key="SolarIrradianceDay",
-            icon="mdi:weather-sunny",
+            icon=mdi_weather_sunny,
             entity_registry_enabled_default=False,
             native_unit_of_measurement=UnitOfIrradiance.WATTS_PER_SQUARE_METER,
             value_fn=lambda data: cast(float, data[ATTR_VALUE]),
@@ -228,7 +230,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     *(
         AccuWeatherSensorDescription(
             key="SolarIrradianceNight",
-            icon="mdi:weather-sunny",
+            icon=mdi_weather_sunny,
             entity_registry_enabled_default=False,
             native_unit_of_measurement=UnitOfIrradiance.WATTS_PER_SQUARE_METER,
             value_fn=lambda data: cast(float, data[ATTR_VALUE]),
@@ -275,7 +277,7 @@ FORECAST_SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     *(
         AccuWeatherSensorDescription(
             key="UVIndex",
-            icon="mdi:weather-sunny",
+            icon=mdi_weather_sunny,
             native_unit_of_measurement=UV_INDEX,
             value_fn=lambda data: cast(int, data[ATTR_VALUE]),
             attr_fn=lambda data: {ATTR_LEVEL: data[ATTR_CATEGORY]},
@@ -358,7 +360,7 @@ SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="CloudCover",
-        icon="mdi:weather-cloudy",
+        icon=mdi_weather_cloudy,
         entity_registry_enabled_default=False,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=PERCENTAGE,
@@ -410,7 +412,7 @@ SENSOR_TYPES: tuple[AccuWeatherSensorDescription, ...] = (
     ),
     AccuWeatherSensorDescription(
         key="UVIndex",
-        icon="mdi:weather-sunny",
+        icon=mdi_weather_sunny,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UV_INDEX,
         value_fn=lambda data: cast(int, data),

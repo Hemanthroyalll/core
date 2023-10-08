@@ -20,6 +20,7 @@ from .coordinator import EzvizDataUpdateCoordinator
 from .entity import EzvizEntity
 
 PARALLEL_UPDATES = 1
+mdi_pan = "mdi:pan"
 
 
 @dataclass
@@ -41,7 +42,7 @@ BUTTON_ENTITIES = (
     EzvizButtonEntityDescription(
         key="ptz_up",
         translation_key="ptz_up",
-        icon="mdi:pan",
+        icon=mdi_pan,
         method=lambda pyezviz_client, serial, run: pyezviz_client.ptz_control(
             "UP", serial, run
         ),
@@ -50,7 +51,7 @@ BUTTON_ENTITIES = (
     EzvizButtonEntityDescription(
         key="ptz_down",
         translation_key="ptz_down",
-        icon="mdi:pan",
+        icon=mdi_pan,
         method=lambda pyezviz_client, serial, run: pyezviz_client.ptz_control(
             "DOWN", serial, run
         ),
@@ -59,7 +60,7 @@ BUTTON_ENTITIES = (
     EzvizButtonEntityDescription(
         key="ptz_left",
         translation_key="ptz_left",
-        icon="mdi:pan",
+        icon=mdi_pan,
         method=lambda pyezviz_client, serial, run: pyezviz_client.ptz_control(
             "LEFT", serial, run
         ),
@@ -68,7 +69,7 @@ BUTTON_ENTITIES = (
     EzvizButtonEntityDescription(
         key="ptz_right",
         translation_key="ptz_right",
-        icon="mdi:pan",
+        icon=mdi_pan,
         method=lambda pyezviz_client, serial, run: pyezviz_client.ptz_control(
             "RIGHT", serial, run
         ),

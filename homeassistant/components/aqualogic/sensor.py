@@ -5,6 +5,8 @@ from dataclasses import dataclass
 
 import voluptuous as vol
 
+mdi_guage = "mdi:gauge"
+
 from homeassistant.components.sensor import (
     PLATFORM_SCHEMA,
     SensorDeviceClass,
@@ -64,21 +66,21 @@ SENSOR_TYPES: tuple[AquaLogicSensorEntityDescription, ...] = (
         name="Pool Chlorinator",
         unit_metric=PERCENTAGE,
         unit_imperial=PERCENTAGE,
-        icon="mdi:gauge",
+        icon=mdi_guage,
     ),
     AquaLogicSensorEntityDescription(
         key="spa_chlorinator",
         name="Spa Chlorinator",
         unit_metric=PERCENTAGE,
         unit_imperial=PERCENTAGE,
-        icon="mdi:gauge",
+        icon=mdi_guage,
     ),
     AquaLogicSensorEntityDescription(
         key="salt_level",
         name="Salt Level",
         unit_metric="g/L",
         unit_imperial="PPM",
-        icon="mdi:gauge",
+        icon=mdi_guage,
     ),
     AquaLogicSensorEntityDescription(
         key="pump_speed",
