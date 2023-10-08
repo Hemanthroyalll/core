@@ -77,7 +77,7 @@ def get_user_step_schema(data: dict[str, Any]) -> vol.Schema:
     """Get a populated schema or default."""
     travel_mode = data.get(CONF_MODE, TRAVEL_MODE_CAR)
     if travel_mode == "publicTransportTimeTable":
-        travel_mode = TRAVEL_MODE_PUBLIC
+        return TRAVEL_MODE_PUBLIC
     return vol.Schema(
         {
             vol.Optional(
