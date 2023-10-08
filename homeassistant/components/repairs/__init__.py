@@ -17,7 +17,7 @@ __all__ = [
     "RepairsFlow",
     "RepairsFlowManager",
 ]
-CONFIG_SCHEMA = cv.empty_config_schema(DOMAIN)
+
 
 
 def repairs_flow_manager(hass: HomeAssistant) -> RepairsFlowManager | None:
