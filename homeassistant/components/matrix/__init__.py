@@ -299,8 +299,9 @@ class MatrixBot:
         """Store authentication token to session and persistent storage."""
         self._access_tokens[self._mx_id] = token
 
+        # Save JSON with the private flag set to True
         await self.hass.async_add_executor_job(
-            save_json, self._session_filepath, self._access_tokens, True  # private=True
+            save_json, self._session_filepath, self._access_tokens, True  
         )
 
     async def _login(self) -> None:
