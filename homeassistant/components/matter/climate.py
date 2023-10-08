@@ -50,13 +50,13 @@ ThermostatFeature = clusters.Thermostat.Bitmaps.ThermostatFeature
 class ThermostatRunningState(IntEnum):
     """Thermostat Running State, Matter spec Thermostat 7.33."""
 
-    Heat = 1  # 1 << 0 = 1
-    Cool = 2  # 1 << 1 = 2
-    Fan = 4  # 1 << 2 = 4
-    HeatStage2 = 8  # 1 << 3 = 8
-    CoolStage2 = 16  # 1 << 4 = 16
-    FanStage2 = 32  # 1 << 5 = 32
-    FanStage3 = 64  # 1 << 6 = 64
+    Heat = 1  
+    Cool = 2  
+    Fan = 4  
+    HeatStage2 = 8  
+    CoolStage2 = 16  
+    FanStage2 = 32  
+    FanStage3 = 64  
 
 
 async def async_setup_entry(
