@@ -72,7 +72,7 @@ class ConnectMotionGateway:
         """Get list of interface to use."""
         interfaces = [DEFAULT_INTERFACE, "0.0.0.0"]
         enabled_interfaces = []
-        default_interface = DEFAULT_INTERFACE
+        
 
         adapters = await network.async_get_adapters(self._hass)
         for adapter in adapters:
