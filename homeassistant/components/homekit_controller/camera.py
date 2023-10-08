@@ -18,7 +18,7 @@ from .entity import AccessoryEntity
 class HomeKitCamera(AccessoryEntity, Camera):
     """Representation of a Homekit camera."""
 
-    # content_type = "image/jpeg"
+    
 
     def get_characteristic_types(self) -> list[str]:
         """Define the homekit characteristics the entity is tracking."""
